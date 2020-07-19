@@ -1,12 +1,15 @@
 .content {
-    background-color: #665b5b;
-    font-weight: bolder;
-    padding: 20px;
-    .header {
-        color: red;
+
+   background-color: #fafafa;
+   padding: 20px;
+
+   .header {
+       color: red;
     }
+    
     .error-message {
-        font-size: 20px;
-        color: green;
+       font-size: 20px;
+       color: gray;
     }
+
 }

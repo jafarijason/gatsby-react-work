@@ -1,12 +1,17 @@
 import React from 'react'
-import styles from './layout.module.scss' 
+import styles from './layout.module.scss'
+import Header from './header.js'
+import Footer from './footer.js'
 
-const Layout = (props) => {
-  return ( 
-    <div className={styles.container}>
-      {props.children}
-    </div>
-   );
-}
- 
-export default Layout;
+export default ({ children }) => (
+   <div className={styles.container}>
+      <Header />
+      <div className={styles.content}>
+         {children}
+      </div>
+      <Footer>
+         My new Gatsby Blog 2019
+    </Footer>
+   </div>
+)
+
