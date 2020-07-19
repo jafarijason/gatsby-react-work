@@ -1,10 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from './404.module.scss'
+import Layout from "../components/layout"
+
+
 export default function Home() {
   return (
 
-    <div>
+    <Layout>
       <h1>About Us</h1>
       <div>
         <Link to="/">Home</Link> | <Link to="/about">About me</Link>
@@ -18,6 +21,6 @@ export default function Home() {
           Page Not Found
             </p>
       </div>
-    </div>
+    </Layout>
   )
 }
