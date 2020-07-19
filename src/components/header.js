@@ -47,9 +47,9 @@ export default () => (
 
         <div className={styles.row}>
           <HomeButton to='/' text='My Gatsby blog' />
-          <SocialButton site="github" username="evangeloper"></SocialButton>
-          <SocialButton site="linkedin" username="evangeloper"></SocialButton>
-          <SocialButton site="twitter" username="evangeloper"></SocialButton>
+          <SocialButton site="github" username="thisisjasonjafari"></SocialButton>
+          <SocialButton site="linkedin" username="jasonjafari"></SocialButton>
+          <SocialButton site="twitter" username="engjafarim"></SocialButton>
         </div>
 
         <div className={styles.row}>

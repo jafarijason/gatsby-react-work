@@ -10,7 +10,7 @@ export default ({ children }) => (
          {children}
       </div>
       <Footer>
-         My new Gatsby Blog 2019
+         My new Gatsby Blog 2020
     </Footer>
    </div>
 )
