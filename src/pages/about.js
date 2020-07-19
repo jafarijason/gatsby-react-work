@@ -4,9 +4,9 @@ export default function Home() {
     return (
         
         <div>
-            <h1>salam</h1>
+            <h1>About Us</h1>
             <p>
-                are baba
+            About Us
             </p>
         </div>
     )
