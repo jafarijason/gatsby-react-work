@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import styles from './header.module.scss'
 
 // HeaderLink component
@@ -32,7 +32,7 @@ const SocialButton = (props) => {
     style = styles.buttonGithub;
     url = "https://www.github.com/" + props.username;
   }
-  
+
   return (
     <a href={url} target="_blank" rel="noopener noreferrer">
       <div className={style}>{props.children}&nbsp;</div>
@@ -42,11 +42,27 @@ const SocialButton = (props) => {
 }
 
 export default () => (
+  <StaticQuery
 
-   <header className={styles.container}>
+    query={
+
+      graphql`query 
+    {
+      site{
+        siteMetadata {
+          title
+        }
+      }
+    }
+   `
+    }
+
+    render={data => (
+
+      <header className={styles.container}>
 
         <div className={styles.row}>
-          <HomeButton to='/' text='My Gatsby blog' />
+          <HomeButton to='/' text={data.site.siteMetadata.title} />
           <SocialButton site="github" username="thisisjasonjafari"></SocialButton>
           <SocialButton site="linkedin" username="jasonjafari"></SocialButton>
           <SocialButton site="twitter" username="engjafarim"></SocialButton>
@@ -54,9 +70,14 @@ export default () => (
 
         <div className={styles.row}>
           <HeaderLink to='/' text='ARTICLES' />
-          <HeaderLink to='/about' text='ABOUT'/>
+          <HeaderLink to='/about' text='ABOUT' />
         </div>
-        
-   </header>
+
+      </header>
+
+    )}
+
+  />
+
 
 )
